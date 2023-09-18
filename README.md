@@ -22,11 +22,11 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/aleizn/Propio
+git clone https://github.com/NatixBc/NatiBot
 ```
 
 ```bash
-cd Propio
+cd NatiBot
 ```
 
 ```bash
@@ -54,7 +54,7 @@ npm start
 ### `—◉ ✔️ ACTIVAR EN CASO DE DETENERSE ✔️`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd Permanente
+> cd NatiBot
 > npm start
 ```
 
