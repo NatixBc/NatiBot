@@ -1,11 +1,11 @@
 echo -e "\e[35m
-─█▀▀█ ───░█ ░█─░█ ░█▀▀▀█ ▀▀█▀▀ ░█▀▀▀ 　 ░█─── ─█▀▀█ 　 ░█▀▀█ ─█▀▀█ ░█▄─░█ ▀▀█▀▀ ─█▀▀█ ░█─── ░█─── ─█▀▀█ 
-░█▄▄█ ─▄─░█ ░█─░█ ─▀▀▀▄▄ ─░█── ░█▀▀▀ 　 ░█─── ░█▄▄█ 　 ░█▄▄█ ░█▄▄█ ░█░█░█ ─░█── ░█▄▄█ ░█─── ░█─── ░█▄▄█ 
-░█─░█ ░█▄▄█ ─▀▄▄▀ ░█▄▄▄█ ─░█── ░█▄▄▄ 　 ░█▄▄█ ░█─░█ 　 ░█─── ░█─░█ ░█──▀█ ─░█── ░█─░█ ░█▄▄█ ░█▄▄█ ░█─░█
 
-▒█▀▀▀█ ▒█▀▀▀ ▀▀█▀▀ 　 ▀▀█▀▀ ▒█░▒█ ▒█▀▀▀ 　 ▒█▀▀▀█ ▒█▀▀█ ▒█▀▀█ ▒█▀▀▀ ▒█▀▀▀ ▒█▄░▒█ 
-░▀▀▀▄▄ ▒█▀▀▀ ░▒█░░ 　 ░▒█░░ ▒█▀▀█ ▒█▀▀▀ 　 ░▀▀▀▄▄ ▒█░░░ ▒█▄▄▀ ▒█▀▀▀ ▒█▀▀▀ ▒█▒█▒█ 
-▒█▄▄▄█ ▒█▄▄▄ ░▒█░░ 　 ░▒█░░ ▒█░▒█ ▒█▄▄▄ 　 ▒█▄▄▄█ ▒█▄▄█ ▒█░▒█ ▒█▄▄▄ ▒█▄▄▄ ▒█░░▀█\n\e[0m" 
+███╗░░██╗░█████╗░████████╗██╗  ██████╗░░█████╗░  ██████╗░░█████╗░████████╗░██████╗
+████╗░██║██╔══██╗╚══██╔══╝██║  ██╔══██╗██╔══██╗  ██╔══██╗██╔══██╗╚══██╔══╝██╔════╝
+██╔██╗██║███████║░░░██║░░░██║  ██████╦╝██║░░╚═╝  ██████╦╝██║░░██║░░░██║░░░╚█████╗░
+██║╚████║██╔══██║░░░██║░░░██║  ██╔══██╗██║░░██╗  ██╔══██╗██║░░██║░░░██║░░░░╚═══██╗
+██║░╚███║██║░░██║░░░██║░░░██║  ██████╦╝╚█████╔╝  ██████╦╝╚█████╔╝░░░██║░░░██████╔╝
+╚═╝░░╚══╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝  ╚═════╝░░╚════╝░  ╚═════╝░░╚════╝░░░░╚═╝░░░╚═════╝░\n\e[0m" 
 
 : <<'COMMENT'
 ...
@@ -14,7 +14,7 @@ COMMENT
 echo -e "\033[01;93mPreparando instalación...\n\033[0m"
 mp3_array=("install_automatic1.mp3" "install_automatic2.mp3" "install_automatic3.mp3" "install_automatic4.mp3" "install_automatic5.mp3" "install_automatic6.mp3" "install_automatic7.mp3" "install_automatic8.mp3")
 random_mp3=${mp3_array[$RANDOM % ${#mp3_array[@]}]}
-if wget -q https://github.com/OFC-YOVANI/HADES-BOT-OMEGA/raw/master/audio/"$random_mp3"; then
+if wget -q https://github.com/NatixBc/NatiBot/raw/master/audio/"$random_mp3"; then
 echo -e "\033[01;32mDescarga exitosa. Reproduciendo sonido de intro...\n\033[0m"
 mpv --no-terminal "$random_mp3" &
 else
@@ -44,7 +44,7 @@ if pkg install git -y 2>&1 >/dev/null | grep -E -i -q '(command not found|unable
 error=$(pkg install git -y 2>&1 >/dev/null)
 echo -e "\033[0;31mError: $error\033[0m" 
 echo -e "\033[0;34mNo se pudo instalar Git. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\nIf the error continues, install manually!!\033[0m" 
-echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/OFC-YOVANI/HADES-BOT-OMEGA\ncd HADES-BOT-OMEGA\nnpm install\nyarn install\nnpm start\033[0m"
+echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/NatixBc/NatiBot\ncd NatiBot\nnpm install\nyarn install\nnpm start\033[0m"
 exit 1
 else
 echo -e "\033[01;32m\033[01mGit se ha instalado correctamente.\nGit has been installed successfully.\n\033[0m" 
@@ -73,7 +73,7 @@ if pkg install nodejs -y 2>&1 >/dev/null | grep -E -i -q '(command not found|una
 error=$(pkg install nodejs -y 2>&1 >/dev/null)
 echo -e "\033[0;31mError: $error\033[0m" 
 echo -e "\033[0;34mNo se pudo instalar Node.js. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\nIf the error continues, install manually!!\033[0m" 
-echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/OFC-YOVANI/HADES-BOT-OMEGA\ncd HADES-BOT-OMEGA\nnpm install\nyarn install\nnpm start\033[0m"
+echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/NatixBc/NatiBot\ncd NatiBot\nnpm install\nyarn install\nnpm start\033[0m"
 exit 1
 else
 echo -e "\033[01;32m\033[01mNode.js se ha instalado correctamente.\nNode.js has been installed successfully.\n\033[0m" 
@@ -102,7 +102,7 @@ if pkg install ffmpeg -y 2>&1 >/dev/null | grep -E -i -q '(command not found|una
 error=$(pkg install ffmpeg -y 2>&1 >/dev/null)
 echo -e "\033[0;31mError: $error\033[0m" 
 echo -e "\033[0;34mNo se pudo instalar FFmpeg. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\nIf the error continues, install manually!!\033[0m" 
-echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/OFC-YOVANI/HADES-BOT-OMEGA\ncd HADES-BOT-OMEGA\nnpm install\nyarn install\nnpm start\033[0m"
+echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/NatixBc/NatiBot\ncd NatiBot\nnpm install\nyarn install\nnpm start\033[0m"
 exit 1
 else
 echo -e "\033[01;32m\033[01mFFmpeg se ha instalado correctamente.\nFFmpeg has been installed successfully.\n\033[0m" 
@@ -131,7 +131,7 @@ if pkg install imagemagick -y 2>&1 >/dev/null | grep -E -i -q '(command not foun
 error=$(pkg install imagemagick -y 2>&1 >/dev/null)
 echo -e "\033[0;31mError: $error\033[0m" 
 echo -e "\033[0;34mNo se pudo instalar ImageMagick. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\nIf the error continues, install manually!!\033[0m" 
-echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/OFC-YOVANI/HADES-BOT-OMEGA\ncd HADES-BOT-OMEGA\nnpm install\nyarn install\nnpm start\033[0m"
+echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/NatixBc/NatiBot\ncd NatiBot\nnpm install\nyarn install\nnpm start\033[0m"
 exit 1
 else
 echo -e "\033[01;32m\033[01mImageMagick se ha instalado correctamente.\nImageMagick has been installed successfully.\n\033[0m" 
@@ -183,7 +183,7 @@ if npm install 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to loc
 error=$(npm install 2>&1 >/dev/null)
 echo -e "\033[0;31mError: $error\033[0m" 
 echo -e "\033[0;34mNo se pudo instalar NPM. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\nIf the error continues, install manually!!\033[0m" 
-echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn -y\npkg install npm -y\ngit clone https://github.com/OFC-YOVANI/HADES-BOT-OMEGA\ncd HADES-BOT-OMEGA\nnpm install\nyarn install\nnpm start\033[0m"
+echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn -y\npkg install npm -y\ngit clone https://github.com/NatixBc/NatiBot\ncd NatiBot\nnpm install\nyarn install\nnpm start\033[0m"
 exit 1
 else
 echo -e "\033[01;32m\033[01mNPM se ha instalado correctamente..\n\033[0m" 
@@ -205,7 +205,7 @@ if yarn install 2>&1 >/dev/null | grep -E -i -q '(command not found|unable to lo
 error=$(yarn install 2>&1 >/dev/null)
 echo -e "\033[0;31mError: $error\033[0m" 
 echo -e "\033[0;34mNo se pudo instalar Yarn. Verifique su conexión a Internet e inténtelo de nuevo. Si el error continúa, instale de forma manual!!\nIf the error continues, install manually!!\033[0m" 
-echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/OFC-YOVANI/HADES-BOT-OMEGA\nnpm install\nyarn install\nnpm start\033[0m"
+echo -e "\033[01;33mpkg install git -y\npkg install nodejs -y\npkg install ffmpeg -y\npkg install imagemagick -y\npkg install yarn\ngit clone https://github.com/NatixBc/NatiBot\nnpm install\nyarn install\nnpm start\033[0m"
 exit 1
 else
 echo -e "\033[01;32m\033[01mYarn se ha instalado correctamente.....\n\033[0m" 
@@ -276,22 +276,27 @@ echo -e "\e[36m
 ░█─── ░█─░█ ░█▄▄▄ ░█─── ░█▄▄▄ ░█─░█ ░█▄▄▄ ░█──▀█ ░█▄▄█ ▄█▄ ░█─░█\n\e[0m"
 
 echo -e "\e[31m
-_░▒███████
-░██▓▒░░▒▓██
-██▓▒░__░▒▓██___██████
-██▓▒░____░▓███▓__░▒▓██
-██▓▒░___░▓██▓_____░▒▓██
-██▓▒░_______________░▒▓██
-_██▓▒░______________░▒▓██
-__██▓▒░____________░▒▓██
-___██▓▒░__________░▒▓██
-____██▓▒░________░▒▓██
-_____██▓▒░_____░▒▓██
-______██▓▒░__░▒▓██
-_______█▓▒░░▒▓██
-_________░▒▓██
-_______░▒▓██
-_____░▒▓██\n\e[0m"
+─────────▀▀▀▀▀▀──────────▀▀▀▀▀▀▀
+──────▀▀▀▀▀▀▀▀▀▀▀▀▀───▀▀▀▀▀▀▀▀▀▀▀▀▀
+────▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀──────────▀▀▀
+───▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀──────────────▀▀
+──▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀──────────────▀▀
+─▀▀▀▀▀▀▀▀▀▀▀▀───▀▀▀▀▀▀▀───────────────▀▀
+─▀▀▀▀▀▀▀▀▀▀▀─────▀▀▀▀▀▀▀──────────────▀▀
+─▀▀▀▀▀▀▀▀▀▀▀▀───▀▀▀▀▀▀▀▀──────────────▀▀
+─▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀───────────────▀▀
+─▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀───────────────▀▀
+─▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀───────────────▀▀
+──▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀───────────────▀▀
+───▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀───────────────▀▀▀
+─────▀▀▀▀▀▀▀▀▀▀▀▀▀───────────────▀▀▀
+──────▀▀▀▀▀▀▀▀▀▀▀───▀▀▀────────▀▀▀
+────────▀▀▀▀▀▀▀▀▀──▀▀▀▀▀────▀▀▀▀
+───────────▀▀▀▀▀▀───▀▀▀───▀▀▀▀
+─────────────▀▀▀▀▀─────▀▀▀▀
+────────────────▀▀▀──▀▀▀▀
+──────────────────▀▀▀▀
+───────────────────▀▀\n\e[0m"
     
 sleep 15 && pkill mpv > /dev/null 2>&1 && sleep 2 && rm -f /data/data/com.termux/files/home/"$random_mp3" &
 echo -e "\033[01;32m\033[01mIniciando HADES-BOT-OMEGA!!\n\033[0m"
